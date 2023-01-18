@@ -1,0 +1,203 @@
+.contato {
+  display: grid;
+  grid-template-columns: 600px 500px;
+  justify-content: center;
+  gap: 50px;
+}
+
+.inputs-text {
+  display: flex;
+  padding-top: 100px;
+  margin-bottom: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.inputs-text h1 {
+  color: #fff;
+  font-size: 30px;
+}
+
+.inputs-text img {
+  width: 100px;
+}
+
+
+.inputs {
+  background-color: #407BFF;
+  justify-content: center;
+  display: grid;
+  padding: 30px;
+
+}
+
+.inputs label {
+  display: block;
+  color: #fff;
+
+}
+
+.inputs input {
+  margin-bottom: 10px;
+  width: 500px;
+  padding: 5px;
+}
+
+.assunto select {
+  width: 500px;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.msg {
+  margin-top: 10px;
+}
+
+.msg textarea {
+  width: 500px;
+}
+
+.btn-contato {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.btn-contato button {
+  padding: 10px 40px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  background: #fff;
+  border: 1px solid #fff;
+}
+
+@media(max-width:1200px) {
+  .contato {
+    display: block;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .inputs {
+    justify-content: center;
+    /* text-align: center; */
+  }
+
+  .svg {
+    display: none;
+  }
+}
+
+@media (max-width:590px) {
+  .inputs input {
+    width: 450px;
+  }
+
+  .msg textarea {
+    width: 450px;
+  }
+
+  .assunto select {
+    width: 450px;
+  }
+}
+
+@media (max-width:550px) {
+  .inputs input {
+    width: 400px;
+  }
+
+  .msg textarea {
+    width: 400px;
+  }
+
+  .assunto select {
+    width: 400px;
+  }
+}
+
+@media (max-width:550px) {
+  .inputs input {
+    width: 350px;
+  }
+
+  .msg textarea {
+    width: 350px;
+  }
+
+  .assunto select {
+    width: 350px;
+  }
+}
+
+@media (max-width:450px) {
+  .inputs input {
+    width: 300px;
+  }
+
+  .msg textarea {
+    width: 300px;
+  }
+
+  .assunto select {
+    width: 300px;
+  }
+
+  .inputs-text img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width:400px) {
+  .inputs input {
+    width: 250px;
+  }
+
+  .msg textarea {
+    width: 250px;
+  }
+
+  .assunto select {
+    width: 250px;
+  }
+}
+
+@media (max-width:350px) {
+  .inputs input {
+    width: 200px;
+  }
+
+  .msg textarea {
+    width: 200px;
+  }
+
+  .assunto select {
+    width: 200px;
+  }
+
+  .inputs {
+    padding: 20px;
+    display: block;
+  }
+
+  .inputs-text {
+    gap: 5px;
+  }
+
+  .inputs-text img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .inputs-text {
+    gap: 10px;
+    text-align: center;
+    /* padding: 10px; */
+  }
+
+  .inputs-text h1 {
+    font-size: 25px;
+  }
+}

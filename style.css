@@ -1,0 +1,46 @@
+@import "./css/nav.css";
+@import "./css/introducao.css";
+@import "./css/quem-sou.css";
+@import "./css/servicos.css";
+@import "./css/conhecimentos.css";
+@import "./css/footer.css";
+@import "./css/contato.css";
+@import "./css/skills.css";
+@import "./css/funcionalidades.css";
+
+* {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Saira";
+}
+
+body {
+  background: #1c1c1c;
+}
+
+#nome-aparece {
+  color: #fff;
+}
+
+#p2-aparece::after {
+  content: "|";
+  opacity: 1;
+  margin-left: 5px;
+  animation: pisca 0.7s infinite;
+}
+
+@keyframes pisca {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* scroll */
