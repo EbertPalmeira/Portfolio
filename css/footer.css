@@ -26,6 +26,9 @@
 .inta {
   animation-delay: 1.5s;
 }
+.gh {
+  animation-delay: 1.5s;
+}
 
 @keyframes icones {
   0% {
@@ -43,10 +46,9 @@
 
 .icones-footer img {
   width: 30px;
-
 }
 
-@media (max-width:450px) {
+@media (max-width: 450px) {
   .footer {
     display: block;
   }

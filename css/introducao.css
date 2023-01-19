@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   grid-template-columns: 500px 500px;
-  background: #1C1C1C;
+  background: #1c1c1c;
   padding-top: 30px;
 }
 
@@ -16,29 +16,26 @@
 .intro-text p {
   font-size: 20px;
   color: #fff;
-
 }
 
 .intro-text h2 {
   font-size: 40px;
   color: #fff;
-
 }
 
 .intro-text a {
-  padding: 15px 80px;
+  padding: 15px 50px;
   margin-top: 10px;
   color: #fff;
   transition: 1.5s;
   cursor: pointer;
-  border: 1px solid #6A97FF;
+  border: 1px solid #6a97ff;
   top: 100px;
   font-size: 18px;
-  background: linear-gradient(to right, #080713, #6A97FF);
 }
 
 .intro-text a:hover {
-  padding: 15px 100px;
+  padding: 15px 80px;
 }
 
 .img-gostos {
@@ -48,13 +45,34 @@
   gap: 80px;
 }
 
-.insta-link {
+.links-contato {
   margin-top: 40px;
 }
-
-/* .gosto {
-  animation: icones 5s ease-in-out infinite;
-} */
+.links-contato a {
+  display: flex;
+  width: 300px;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #6a97ff;
+  background: linear-gradient(to right, #080713, #6a97ff);
+}
+.links-contato img {
+  width: 40px;
+}
+.git {
+  padding-top: 20px;
+}
+.git a {
+  display: flex;
+  width: 300px;
+  align-items: center;
+  gap: 30px;
+  border: 1px solid #8a2be2;
+  background: linear-gradient(to right, #080713, #8a2be2);
+}
+.git img {
+  width: 40px;
+}
 
 .fut {
   animation-delay: 1s;
@@ -78,7 +96,7 @@
   }
 }
 
-@media (max-width:1100px) {
+@media (max-width: 1100px) {
   .intro-logo {
     display: none;
   }
@@ -95,10 +113,9 @@
   }
 }
 
-@media(max-width:440px) {
+@media (max-width: 440px) {
   .img-gostos {
     gap: 50px;
-
   }
 
   .img-gostos img {
@@ -107,28 +124,44 @@
   }
 }
 
-@media(max-width:400px) {
+@media (max-width: 400px) {
   .img-gostos {
     grid-template-columns: 50px 50px;
   }
+
+  .links-contato a {
+    width: 250px;
+    margin: 0 auto;
+  }
+  .git a {
+    width: 250px;
+    margin: 0 auto;
+  }
 }
 
-@media(max-width:300px) {
+@media (max-width: 300px) {
   .intro-text h2 {
     font-size: 35px;
   }
 
   .intro-text a {
-    padding: 15px 40px;
+    padding: 15px 20px;
   }
 
   .intro-text a:hover {
     padding: 15px 60px;
   }
-
+  .links-contato a {
+    width: 200px;
+    margin: 0 auto;
+  }
+  .git a {
+    width: 200px;
+    margin: 0 auto;
+  }
 }
 
-@media(max-width:250px) {
+@media (max-width: 250px) {
   .intro-text a {
     padding: 15px 20px;
   }
