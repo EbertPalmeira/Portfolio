@@ -56,12 +56,10 @@ var owl = $('.owl-carousel');
 owl.owlCarousel({
   items: 1,
   nav: true,
-  navText: ["<div class ='btn'>  <button> ‹ </button>",
-    "<div class ='btn'> <button>›</button>"],
   margin: 10,
   loop: true,
   autoplay: true,
-  autoplayTimeout: 6000,
+  autoplayTimeout: 5000,
   autoplayHoverPause: true
 });
 $('.play').on('click', function () {
