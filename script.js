@@ -55,11 +55,10 @@ initScrollSuave();
 var owl = $('.owl-carousel');
 owl.owlCarousel({
   items: 1,
-  nav: true,
   margin: 10,
   loop: true,
   autoplay: true,
-  autoplayTimeout: 5000,
+  autoplayTimeout: 4000,
   autoplayHoverPause: true
 });
 $('.play').on('click', function () {
