@@ -2,13 +2,14 @@
     color: #fff;
     margin-top: 40px;
 }
-.btn button{
+/* .btn button{
     display: flex;
     color: "#fff";
     width: 300px;
     height: 70px;
     align-items: center;
     justify-content: center;
+    text-align: center;
     margin-bottom: 20px;
     cursor: pointer;
     gap: 20px;
@@ -16,25 +17,31 @@
     
     text-align: center;
     
-}
-.btn button a{
+} */
+/* .btn button a{
     align-items: center;
     text-align: center;
     color: #fff;
     transition: 0.5;
-}
-.link{
-    background: linear-gradient(to right, #080713, #6a97ff);
-    border: 1px solid #6a97ff;
-    transition: 0.6s;
-    animation: gostos;
-}
-.git{
-    background: linear-gradient(to right, #080713, #8a2be2);
+} */
+
+/* .git{
+    background: linear-gradient(to right, #17152e, #8a2be2);
     border: 1px solid #8a2be2;
     transition: 0.5s;
 
-}
-.link:hover ,.git:hover{
+} */
+/* .link:hover ,.git:hover{
     transform: scale(1.05)
+} */
+.imgPc img{
+    width: 550px;
+}
+
+
+@media (max-width:800px) {
+    
+    .imgPc img{
+        display: none;
+    }
 }
