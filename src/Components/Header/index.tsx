@@ -31,7 +31,7 @@ const Navbar = () => {
           {!isMobile && (
             <Grid sx={{ display: 'flex', gap: '40px' }}>
               {menuItems.map((item) => (
-                <Link key={item.text} sx={{ textDecoration: 'none', color: 'white' }} href={item.link}>
+                <Link key={item.text} sx={{ textDecoration: 'none', color: 'white',fontWeight:'700' }} href={item.link}>
                   {item.text}
                 </Link>
               ))}

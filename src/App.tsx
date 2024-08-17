@@ -4,7 +4,7 @@ import './App.css'
 import Header from './Components/Header'
 import Main from './Components/Main'
 
-import { createTheme, ThemeProvider, CssBaseline } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material';
 
 function App() {
   const theme = createTheme({
@@ -16,7 +16,7 @@ function App() {
   });
 
   return (
-    <Grid sx={{background:'black',margin:'0'}}>
+    <Grid sx={{background:'#1C1C1C		',margin:'0'}}>
       <ThemeProvider theme={theme}>
       <Header />
       <Main/>
