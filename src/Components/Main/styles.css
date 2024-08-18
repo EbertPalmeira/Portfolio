@@ -34,14 +34,14 @@
 /* .link:hover ,.git:hover{
     transform: scale(1.05)
 } */
-.imgPc img{
+/* .imgPc img{
     width: 550px;
-}
+} */
 
 
-@media (max-width:800px) {
+/* @media (max-width:800px) {
     
     .imgPc img{
         display: none;
     }
-}
+} */

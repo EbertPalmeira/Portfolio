@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import  {Box, Button, Grid,Typography}  from '@mui/material'
+import  {Box, Button, Grid,Typography,Avatar}  from '@mui/material'
 import code from '../../imgs/code.svg'
 import { FaLinkedin,FaGithub ,FaReact,FaJs,FaHtml5 } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
@@ -173,7 +173,22 @@ const boots = keyframes`
 
   
   return (
-    <Grid container spacing={2} sx={{display:'flex',justifyContent:'center',marginTop:'50px',color:'#fff',alignItems:'center',gap:'200px'}}>
+    <Grid container spacing={2} sx={{
+      display:'flex',
+      justifyContent:'center',
+      marginTop:'50px',
+      color:'#fff',
+      alignItems:'center',
+      gap:'200px',
+      
+      '@media (max-width:800px)':{
+          gap:'100px'
+
+                  
+                  
+              }
+      
+      }}>
 
         <Grid  sx={{alignItems:'center'}}>
             <Grid className='sobre' sx={{marginBottom:'20px'}}>
@@ -291,7 +306,20 @@ const boots = keyframes`
         
             
             }}>
-            <img src={code}  />
+            <Avatar src={code} sx={{
+                 width:550,
+                 height:550,
+
+                 '@media (max-width:500px)':{
+                  display:'none'
+
+                  
+                  
+              }
+             
+             } }/>
+            
+            
             <AnimatedIcon sx={{
                 position:'absolute',
                 alignItems:'center',
