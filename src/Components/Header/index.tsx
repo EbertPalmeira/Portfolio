@@ -1,175 +1,10 @@
-import React,{useState,useEffect} from 'react'
-import  {Box, Button, Grid,Typography,Avatar}  from '@mui/material'
+import  { Button, Grid,Typography,Avatar}  from '@mui/material'
 import code from '../../imgs/code.svg'
-import { FaLinkedin,FaGithub ,FaReact,FaJs,FaHtml5 } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
-import { BsBootstrapFill } from "react-icons/bs";
+import { FaLinkedin,FaGithub  } from "react-icons/fa";
 
 import './styles.css'
-import { keyframes } from '@emotion/react';
-import { styled } from '@mui/material/styles';
-
-
 
 const Header = () => {
-
-    const spin = keyframes`
-    0% {
-    left: 100px;
-    top: 0px;
-  }
-  25% {
-    left: 200px;
-    transform: rotate(90deg);
-  }
-  50% {
-    top: 200px;
-  }
-  75% {
-    left: 100px;
-  }
-  100% {
-    left: 100px;
-    top: 0px;
-    transform: rotate(360deg);
-  }
-`;
-
-const js = keyframes`
-        0% {
-    top: 500px;
-    left: 500px;
-  }
-  25% {
-    left: 400px;
-    top: 300px;
-  }
-  50% {
-    top: 200px;
-    left: 200px;
-  }
-  75% {
-    top: 500px;
-    left: 300px;
-  }
-  100% {
-    top: 500px;
-    left: 500px;
-    transform: rotate(360deg);
-  }
-`;
-const html = keyframes`
-      0% {
-    top: 300px;
-    left: 400px;
-  }
-  25% {
-    left: 200px;
-    top: 200px;
-  }
-  50% {
-    top: 100px;
-    left: 100px;
-  }
-  75% {
-    top: 300px;
-    left: 300px;
-  }
-  100% {
-    top: 300px;
-    left: 400px;
-    transform: rotate(360deg);
-  }
-`;
-const types = keyframes`
-   0% {
-    top: 500px;
-    left: 50px;
-  }
-  25% {
-    left: 200px;
-    top: 300px;
-  }
-  50% {
-    top: 100px;
-    left: 100px;
-  }
-  75% {
-    top: 300px;
-    left: 80px;
-  }
-  100% {
-    top: 500px;
-    left: 50px;
-    transform: rotate(360deg);
-  }
-`;
-const boots = keyframes`
-   0% {
-    top: 500px;
-    left: 200px;
-  }
-  25% {
-    left: 500px;
-    top: 300px;
-  }
-  50% {
-    top: 50px;
-    left: 100px;
-  }
-  75% {
-    top: 300px;
-    left: 400px;
-  }
-  100% {
-    top: 500px;
-    left: 200px;
-    transform: rotate(360deg);
-  }
-`;
-
-
-        const AnimatedIcon = styled(FaReact)(({ theme }) => ({
-            fontSize: '4rem',
-            color: theme.palette.primary.main,
-            transition: 'color 0.3s',
-            animation: `${spin} 10s linear infinite`,
-
-            
-          }));
-
-          const AnimatedJJs = styled(FaJs)(({ theme }) => ({
-            fontSize: '4rem',
-            color: theme.palette.primary.main,
-            transition: 'color 0.3s',
-            animation: `${js} 10s linear infinite`,
-
-            
-          }));
-          const AnimatedHtml = styled(FaHtml5)(({ theme }) => ({
-            fontSize: '4rem',
-            color: theme.palette.primary.main,
-            transition: 'color 0.3s',
-            animation: `${html} 10s linear infinite`,
-
-            
-          }));
-          const AnimatedTs = styled(SiTypescript)(({ theme }) => ({
-            fontSize: '4rem',
-            color: theme.palette.primary.main,
-            transition: 'color 0.3s',
-            animation: `${types} 10s linear infinite`,
-
-            
-          }));
-          const AnimatedBoots = styled(BsBootstrapFill)(({ theme }) => ({
-            fontSize: '4rem',
-            color: theme.palette.primary.main,
-            transition: 'color 0.3s',
-            animation: `${boots} 10s linear infinite`,
-
-            
-          }));
 
   
   return (
@@ -183,10 +18,7 @@ const boots = keyframes`
       marginBottom:'100px',
       
       '@media (max-width:800px)':{
-          gap:'100px'
-
-                  
-                  
+          gap:'100px'  
               }
       
       }}>
@@ -321,44 +153,7 @@ const boots = keyframes`
              } }/>
             
             
-            {/* <AnimatedIcon sx={{
-                position:'absolute',
-                alignItems:'center',
-                textAlign:'center',
-                color:'#4169E1'
-                
-                
-                }}/>
-
-                <AnimatedJJs sx={{
-                    position:'absolute',
-                    alignItems:'center',
-                    textAlign:'center',
-                    color:'yellow'
-                }}/>
-
-                <AnimatedHtml sx={{
-                    position:'absolute',
-                    alignItems:'center',
-                    textAlign:'center',
-                    color:'#FF4500'
-                }}/>
-
-                <AnimatedTs sx={{
-                     position:'absolute',
-                     alignItems:'center',
-                     textAlign:'center',
-                     color:'#1E90FF	'
-                }}
-                
-                />
-
-                <AnimatedBoots sx={{
-                    position:'absolute',
-                    alignItems:'center',
-                    textAlign:'center',
-                    color:'#4B0082'
-                }} /> */}
+           
         </Grid>
 
 
