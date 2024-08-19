@@ -1,364 +1,259 @@
-import React,{useState,useEffect} from 'react'
-import  {Box, Button, Grid,Typography,Avatar}  from '@mui/material'
-import code from '../../imgs/code.svg'
-import { FaLinkedin,FaGithub ,FaReact,FaJs,FaHtml5 } from "react-icons/fa";
+import { Grid,Box,Avatar,Typography,Link } from '@mui/material'
+import React from 'react'
+import imgEu from '../../imgs/eucode.svg'
+import {FaReact,FaJs,FaHtml5 ,FaInstagram,FaLinkedin,FaGithub,FaStackOverflow} from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
-import { BsBootstrapFill } from "react-icons/bs";
 
-import './styles.css'
+
 import { keyframes } from '@emotion/react';
 import { styled } from '@mui/material/styles';
 
-
-
-const Main = () => {
-
-    const spin = keyframes`
-    0% {
-    left: 100px;
-    top: 0px;
+const html = keyframes`
+     0% {
+    transform: translateY(0px);
   }
-  25% {
-    left: 200px;
-    transform: rotate(90deg);
-  }
+
   50% {
-    top: 200px;
+    transform: translateY(-30px) translateX(-20px);
+
   }
-  75% {
-    left: 100px;
-  }
+
   100% {
-    left: 100px;
-    top: 0px;
-    transform: rotate(360deg);
+    transform: translateY(0px);
   }
 `;
 
 const js = keyframes`
+   0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-30px) translateX(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  } left: 300px;
+  }
+  100% {
+    top: 200px;
+    left: 200px;
+    transform: rotate(360deg);
+  }
+`;
+
+const spin = keyframes`
         0% {
-    top: 500px;
-    left: 500px;
+    transform: translateY(0px);
   }
-  25% {
-    left: 400px;
-    top: 300px;
-  }
+
   50% {
-    top: 200px;
-    left: 200px;
+    transform: translateY(-30px) translateX(10px);
   }
-  75% {
-    top: 500px;
-    left: 300px;
-  }
+
   100% {
-    top: 500px;
-    left: 500px;
-    transform: rotate(360deg);
+    transform: translateY(0px);
   }
 `;
-const html = keyframes`
-      0% {
-    top: 300px;
-    left: 400px;
-  }
-  25% {
-    left: 200px;
-    top: 200px;
-  }
-  50% {
-    top: 100px;
-    left: 100px;
-  }
-  75% {
-    top: 300px;
-    left: 300px;
-  }
-  100% {
-    top: 300px;
-    left: 400px;
-    transform: rotate(360deg);
-  }
-`;
+
 const types = keyframes`
-   0% {
-    top: 500px;
-    left: 50px;
+        0% {
+    transform: translateY(0px);
   }
-  25% {
-    left: 200px;
-    top: 300px;
-  }
+
   50% {
-    top: 100px;
-    left: 100px;
+    transform: translateY(-30px) translateX(10px);
   }
-  75% {
-    top: 300px;
-    left: 80px;
-  }
+
   100% {
-    top: 500px;
-    left: 50px;
-    transform: rotate(360deg);
-  }
-`;
-const boots = keyframes`
-   0% {
-    top: 500px;
-    left: 200px;
-  }
-  25% {
-    left: 500px;
-    top: 300px;
-  }
-  50% {
-    top: 50px;
-    left: 100px;
-  }
-  75% {
-    top: 300px;
-    left: 400px;
-  }
-  100% {
-    top: 500px;
-    left: 200px;
-    transform: rotate(360deg);
+    transform: translateY(0px);
   }
 `;
 
 
-        const AnimatedIcon = styled(FaReact)(({ theme }) => ({
-            fontSize: '4rem',
-            color: theme.palette.primary.main,
-            transition: 'color 0.3s',
-            animation: `${spin} 10s linear infinite`,
+const bounceAnimation = keyframes`
+0% {
+  transform: translateY(0px);
+}
 
-            
-          }));
+50% {
+  transform: translateY(-20px);
+}
 
-          const AnimatedJJs = styled(FaJs)(({ theme }) => ({
-            fontSize: '4rem',
-            color: theme.palette.primary.main,
-            transition: 'color 0.3s',
-            animation: `${js} 10s linear infinite`,
+100% {
+  transform: translateY(0px);
+}
+`;
 
-            
-          }));
-          const AnimatedHtml = styled(FaHtml5)(({ theme }) => ({
-            fontSize: '4rem',
-            color: theme.palette.primary.main,
-            transition: 'color 0.3s',
-            animation: `${html} 10s linear infinite`,
 
-            
-          }));
-          const AnimatedTs = styled(SiTypescript)(({ theme }) => ({
-            fontSize: '4rem',
-            color: theme.palette.primary.main,
-            transition: 'color 0.3s',
-            animation: `${types} 10s linear infinite`,
+const AnimatedIcon = styled(FaReact)(({ theme }) => ({
+    fontSize: '4rem',
+    color: theme.palette.primary.main,
+    transition: 'color 0.3s',
+    animation: `${spin} 10s linear infinite`,
 
-            
-          }));
-          const AnimatedBoots = styled(BsBootstrapFill)(({ theme }) => ({
-            fontSize: '4rem',
-            color: theme.palette.primary.main,
-            transition: 'color 0.3s',
-            animation: `${boots} 10s linear infinite`,
+    
+  }));
+const AnimatedHtml = styled(FaHtml5)(({ theme }) => ({
+    fontSize: '4rem',
+    color: theme.palette.primary.main,
+    transition: 'color 0.3s',
+    animation: `${html} 10s linear infinite`,
 
-            
-          }));
+    
+  }));
+
+const AnimatedJJs = styled(FaJs)(({ theme }) => ({
+    fontSize: '4rem',
+    color: theme.palette.primary.main,
+    transition: 'color 0.3s',
+    animation: `${js} 10s linear infinite`,
+
+    
+  }));
+
+  const AnimatedTs = styled(SiTypescript)(({ theme }) => ({
+    fontSize: '4rem',
+    color: theme.palette.primary.main,
+    transition: 'color 0.3s',
+    animation: `${types} 10s linear infinite`,
+
+    
+  }));
+
+ 
 
   
+
+ 
+
+const Main = () => {
   return (
-    <Grid container spacing={2} sx={{
-      display:'flex',
-      justifyContent:'center',
-      marginTop:'50px',
-      color:'#fff',
-      alignItems:'center',
-      gap:'200px',
-      
-      '@media (max-width:800px)':{
-          gap:'100px'
+    <Grid   sx={{
+        display:'grid',
+        gridTemplateColumns:'400px 400px',
+        justifyContent:'center',
+        gap:'50px',
+        border:'2px solid #1f1f1f',
+        width:'1000px',
+        margin:'0 auto',
+        padding:'50px',
+        position: 'relative',
+        overflow: 'hidden',
+    }}>
+        <Grid >   
+           
+            <Avatar  src={imgEu} sx={{
+                width:'350px',
+                height:'350px',
+                animation: `${bounceAnimation} 5s ease-in-out infinite`, // Animação aplicada
+            }}/>
 
-                  
-                  
-              }
-      
-      }}>
-
-        <Grid  sx={{alignItems:'center'}}>
-            <Grid className='sobre' sx={{marginBottom:'20px'}}>
-                <Typography 
-                    sx={{fontSize:'20px',
-                        marginBottom:'10px',
-                        fontWeight:'600'
-                    }}>
-                        Olá, eu sou
-                    
-                    </Typography>
-                
-                <Typography 
-                    sx={{fontSize:'2.5em',
-                    marginBottom:'10px',
-                    fontWeight:'700',
-                    fontStyle:'normal',
-                    '@media (max-width:600px)': {
-                    fontSize: '2.1em', 
-                    },
-
-                }}
-                >
-                Ebert Palmeira.
-            
-             
-                </Typography>
-                <Typography 
-                    sx={{
-                        fontSize:'20px',
-                        marginBottom:'10px',
-                        fontWeight:'700',
-                        fontStyle:'normal',
-                        fontFamily:'Poppins'
-
-                        }}> 
-                        Front-end Developer.
-                        
-                        </Typography>
-            </Grid>
-            <Grid  xs={12} sm={6} md={4} lg={3} sx={{
-                display:"grid",
-                textAlign:'center',
+        <AnimatedHtml size={55} sx={{
+                position:'absolute',
                 alignItems:'center',
-                gap: '20px',
-                
-                }} className='btn' >
-                <Button sx={{
-                        display:'flex',
-                        alignItems:'center',
-                        justifyContent:'center',
-                        background: 'linear-gradient(to right, #120f2b, #6a97ff);',
-                        border:' 1px solid #6a97ff',
-                        transition:'0.5s',
-                        width: '300px',
-                        height:'70px',
-                        gap: '20px',
-                        color:'#fff',
-                        textTransform:'capitalize',
-                        fontSize:'1em',
+                margin:'0',
+                padding:'0',
+                color:'#FF4500',
+                bottom:'350px',
+                borderRadius:'10px',
+                background:'#000',  
+                }}/>
 
-                        ':hover':{
-                            padding:'10px',
-                            transform: 'scale(1.05)',
-                        },
-
-                        '@media (max-width:400px)':{
-                        width: '200px',
-                        height:' 70px',
-
-                        
-                        
-                    }
-                    
-                }} className='link'>
-                    <FaLinkedin size={30} style={{background:'none',color:'#fff'}}/>
-                   
-                    <a href='' style={{background:'none',color:'#fff'}}> LinkedIn</a>
-                </Button>
-
-                    <Button sx={{
-                        background: 'linear-gradient(to right, #17152e, #8a2be2)',
-                        border:' 1px solid #8a2be2',
-                        transition:' 0.5s',
-                        width: '300px',
-                        height:'70px',
-                        gap: '20px',
-                        textTransform:'capitalize',
-                        fontSize:'1em',
-
-                        ':hover':{
-                            padding:'10px',
-                            transform: 'scale(1.05)',
-                        },
-
-                        '@media (max-width:400px)':{
-                        width: '200px',
-                        height:' 70px',
-
-                        }
-                    }} className='git'>
-                    <FaGithub size={30} style={{background:'none',color:'#fff'}}/>
-                   
-                    <a href='' style={{background:'none',color:'#fff'}}>GitHub</a>
-                    </Button>
-            </Grid>
-
-        </Grid>
-        <Grid className="imgPc" sx={{
-            display:'absolute',
-            justifyContent:'center',
-            position: 'relative',
-            textAlign:'center',
-            overflow: 'hidden',
-        
-            
-            }}>
-            <Avatar src={code} sx={{
-                 width:550,
-                 height:550,
-
-                 '@media (max-width:500px)':{
-                  display:'none'
-
-                  
-                  
-              }
-             
-             } }/>
+        <AnimatedJJs size={50} sx={{
+         position:'absolute',
+         alignItems:'center',
+         textAlign:'center',
+         color:'yellow',
+         background:'#000',
+         marginLeft:'250px'
             
             
-            <AnimatedIcon sx={{
+        }}/>
+
+        <AnimatedIcon size={50} sx={{
                 position:'absolute',
                 alignItems:'center',
                 textAlign:'center',
-                color:'#4169E1'
+                color:'#4169E1',
+                bottom:'300px',
+                marginLeft:'280px',
+                borderRadius:'10px',
+                background:'#000', 
+
                 
                 
-                }}/>
+        }}/>
 
-                <AnimatedJJs sx={{
-                    position:'absolute',
-                    alignItems:'center',
-                    textAlign:'center',
-                    color:'yellow'
-                }}/>
-
-                <AnimatedHtml sx={{
-                    position:'absolute',
-                    alignItems:'center',
-                    textAlign:'center',
-                    color:'#FF4500'
-                }}/>
-
-                <AnimatedTs sx={{
+            <AnimatedTs size={45} sx={{
                      position:'absolute',
                      alignItems:'center',
                      textAlign:'center',
-                     color:'#1E90FF	'
-                }}
-                
+                     color:'#1E90FF	',
+                    border:'1px solid #000',
+                    background:'#000', 
+                }}  
                 />
 
-                <AnimatedBoots sx={{
-                    position:'absolute',
-                    alignItems:'center',
-                    textAlign:'center',
-                    color:'#4B0082'
-                }} />
+        
+           
         </Grid>
+
+
+        <Box>
+            <Typography sx={{
+                color:"#986dff",
+                display:'flex',
+                gap:'10px',
+                fontSize:'1.6em'
+                }}>
+                Quem sou.
+            </Typography>
+
+            <Typography sx={{fontSize:'2em',color:"#fff"}}>
+                Ebert Palmeira
+            </Typography>
+
+            <Typography sx={{fontSize:'1.2em',color:"#fff",marginBottom:'20px'}}>
+                Frontend Developer
+            </Typography>
+
+            <Typography sx={{
+                color:'#9ca3af',
+                 fontFamily: 'Archivo, Arial, sans-serif',
+            }}>
+                Meu nome é Ebert, sou desenvolvedor Front-end. Sempre fui um entusiasta das tecnologias e estou constantemente em busca de conhecimento, seja através do YouTube ou de cursos online. Desenvolvo interfaces modernas e de alta qualidade, concentrando-me em performance, animações e responsividade. Além disso, crio projetos independentes para praticar e aprimorar meus conhecimentos.
+            </Typography>
+
+            <Grid sx={{
+                display:'flex',
+                gap:'20px',
+                marginTop:'30px'
+                
+                }}>
+                <Typography sx={{padding:'10px 15px',border:'5px solid #1f1f1f',borderRadius:'20px'}}>
+                    <Link sx={{cursor:'pointer'}}> <FaInstagram color='#986dff' size={30}/> </Link>   
+                </Typography>
+
+                <Typography sx={{padding:'10px 15px',border:'5px solid #1f1f1f',borderRadius:'20px'}}>
+                   <Link sx={{cursor:'pointer'}}> <FaLinkedin color='#986dff' size={30}/> </Link>
+                </Typography>
+
+                <Typography sx={{padding:'10px 15px',border:'5px solid #1f1f1f',borderRadius:'20px'}}>
+                    <Link sx={{cursor:'pointer'}}> <FaGithub color='#986dff' size={30}/> </Link>
+                </Typography>
+
+                <Typography sx={{padding:'10px 15px',border:'5px solid #1f1f1f',borderRadius:'20px'}}>
+                    <Link sx={{cursor:'pointer'}}> <FaStackOverflow color='#986dff' size={30}/> </Link>
+                </Typography>
+            </Grid>
+
+        </Box>
+
+
+
+
 
 
     </Grid>
