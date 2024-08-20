@@ -8,7 +8,8 @@ import '@fontsource/archivo';
 
 
 import { createTheme, ThemeProvider } from '@mui/material';
-import Aside from './Components/Aside'
+import Aside from './Components/Projetos'
+import Servicos from './Components/Serviços'
 
 function App() {
   const theme = createTheme({
@@ -26,6 +27,7 @@ function App() {
         <Nav/>
         <Main/>
         <Aside/>
+        <Servicos/>
       </ThemeProvider>
     </Grid>
   )

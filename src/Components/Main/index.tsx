@@ -192,7 +192,8 @@ const AnimatedJJs = styled(FaJs)(({ theme }) => ({
                     padding:'10px 15px',
                     border:'5px solid #1f1f1f',
                     borderRadius:'20px',
-                    transition: 'all 0.4s',
+                    transition: 'all 0.8s',
+                    
 
                     '&:hover': {
                     borderRadius: '5px',
