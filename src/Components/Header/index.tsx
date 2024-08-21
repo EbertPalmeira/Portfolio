@@ -23,7 +23,7 @@ const Header = () => {
       
       }}>
 
-        <Grid  sx={{alignItems:'center'}}>
+        <Grid  sx={{alignItems:'center',padding:'50px'}}>
             <Grid className='sobre' sx={{marginBottom:'20px'}}>
                 <Typography 
                     sx={{fontSize:'20px',

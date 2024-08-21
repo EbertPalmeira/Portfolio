@@ -76,7 +76,8 @@ const Main = () => {
 
 
     }}>
-        <Grid sx={{
+        <Grid 
+          sx={{
            display:'flex',
            flexDirection: 'column',
            justifyContent:'center',

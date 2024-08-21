@@ -1,24 +1,18 @@
 import {Grid, Typography} from '@mui/material'
 import { RiFileCodeLine } from "react-icons/ri";
 import { PiWebhooksLogoBold,PiUsersThreeDuotone } from "react-icons/pi"
-import Paper from '@mui/material/Paper';
-import { styled } from '@mui/material/styles';
 
 
 
 const Servicos = () => {
 
-    const item = styled(Paper)(({ theme }) => ({
-        padding: theme.spacing(1),
-        textAlign: 'center',
-        display:"flex",
-        color: theme.palette.text.secondary,
-      }));
-      
+
 
   return (
     <> 
-    <Typography sx={{
+    <Typography 
+      
+      sx={{
       display:'flex',
       justifyContent:'center',
       color:'#fff',
@@ -29,6 +23,7 @@ const Servicos = () => {
        Serviços
         <Typography sx={{color:'#986dff',fontSize:'1.2em', alignItems:'center',textAlign:'center'}}> .</Typography>
      </Typography>
+
 
     <Grid sx={{
        display: 'flex',
