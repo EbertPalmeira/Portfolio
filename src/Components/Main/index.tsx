@@ -1,134 +1,13 @@
-import { Grid,Box,Avatar,Typography,Link } from '@mui/material'
-import React from 'react'
+import { Grid,Avatar,Typography,Link } from '@mui/material'
 import imgEu from '../../imgs/eucode.svg'
-import {FaReact,FaJs,FaHtml5 ,FaInstagram,FaLinkedin,FaGithub,FaStackOverflow,FaWhatsapp} from "react-icons/fa";
-import { SiTypescript,SiMui } from "react-icons/si";
+import {FaInstagram,FaLinkedin,FaGithub,FaStackOverflow,FaWhatsapp} from "react-icons/fa";
+
 
 
 import { keyframes } from '@emotion/react';
-import { styled } from '@mui/material/styles';
 
-const html = keyframes`
-       0% {
-    top: 300px;
-    left: 400px;
-  }
-  25% {
-    left: 200px;
-    top: 200px;
-  }
-  50% {
-    top: 100px;
-    left: 100px;
-  }
-  75% {
-    top: 300px;
-    left: 300px;
-  }
-  100% {
-    top: 300px;
-    left: 400px;
-    transform: rotate(360deg);
-  }
-`;
 
-const js = keyframes`
-       0% {
-    top: 200px;
-    left: 200px;
-  }
-  25% {
-    left: 300px;
-    top: 100px;
-  }
-  50% {
-    top: 50px;
-    left: 100px;
-  }
-  75% {
-    top: 200px;
-    left: 400px;
-  }
-  100% {
-    top: 200px;
-    left: 200px;
-    transform: rotate(360deg);
 
-  }
-`;
-
-const spin = keyframes`
-    0% {
-    left: 100px;
-    top: 0px;
-  }
-  25% {
-    left: 200px;
-    transform: rotate(90deg);
-  }
-  50% {
-    top: 200px;
-  }
-  75% {
-    left: 100px;
-  }
-  100% {
-    left: 100px;
-    top: 0px;
-    transform: rotate(360deg);
-  }
-`;
-
-const types = keyframes`
- 0% {
-    top: 200px;
-    left: 50px;
-  }
-  25% {
-    left: 200px;
-    top: 300px;
-  }
-  50% {
-    top: 100px;
-    left: 100px;
-  }
-  75% {
-    top: 300px;
-    left: 80px;
-  }
-  100% {
-    top: 200px;
-    left: 50px;
-    transform: rotate(360deg);
-  }
-`;
-
-const mui = keyframes`
- 0% {
-    top: 200px;
-    left: 50px;
-  }
-  25% {
-    left: 200px;
-    top: 300px;
-  }
-  50% {
-    top: 100px;
-    left: 100px;
-  }
-  75% {
-    top: 300px;
-    left: 80px;
-  }
-  100% {
-    top: 200px;
-    left: 50px;
-    transform: rotate(360deg);
-
-    
-
-  }
-`;
 
 const bounceAnimation = keyframes`
 0% {
@@ -145,48 +24,7 @@ const bounceAnimation = keyframes`
 `;
 
 
-const AnimatedIcon = styled(FaReact)(({ theme }) => ({
-    fontSize: '4rem',
-    color: theme.palette.primary.main,
-    transition: 'color 0.3s',
-    animation: `${spin} 10s linear infinite`,
 
-    
-  }));
-const AnimatedHtml = styled(FaHtml5)(({ theme }) => ({
-    fontSize: '4rem',
-    color: theme.palette.primary.main,
-    transition: 'color 0.3s',
-    animation: `${html} 10s linear infinite`,
-
-    
-  }));
-
-const AnimatedJJs = styled(FaJs)(({ theme }) => ({
-    fontSize: '4rem',
-    color: theme.palette.primary.main,
-    transition: 'color 0.3s',
-    animation: `${js} 10s linear infinite`,
-
-    
-  }));
-
-  const AnimatedTs = styled(SiTypescript)(({ theme }) => ({
-    fontSize: '4rem',
-    color: theme.palette.primary.main,
-    transition: 'color 0.3s',
-    animation: `${types} 10s linear infinite`,
-
-    
-  }));
-  const AnimatedMui = styled(SiMui)(({ theme }) => ({
-    fontSize: '4rem',
-    color: theme.palette.primary.main,
-    transition: 'color 0.3s',
-    animation: `${mui} 10s linear infinite`,
-
-    
-  }));
 
   const customTypographyStyles = () => ({
                     padding:'10px 15px',
@@ -246,7 +84,7 @@ const Main = () => {
            textAlign:'center',
 
            '@media (min-width: 600px)': {
-                flexDirection: 'row', // Em telas maiores, organiza em linha
+                flexDirection: 'row',
                 gap: '40px',
   },
            

@@ -18,7 +18,7 @@ const Servicos = () => {
       color:'#fff',
       fontSize:'2em',
       alignItems:'center',
-      marginTop:'100px'
+      marginTop:'150px'
      }}>
        Serviços
         <Typography sx={{color:'#986dff',fontSize:'1.2em', alignItems:'center',textAlign:'center'}}> .</Typography>
