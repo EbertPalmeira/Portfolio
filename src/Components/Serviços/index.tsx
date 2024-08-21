@@ -1,14 +1,20 @@
-import React from 'react'
 import {Grid, Typography} from '@mui/material'
-import { FaLaptopCode } from "react-icons/fa";
 import { RiFileCodeLine } from "react-icons/ri";
 import { PiWebhooksLogoBold,PiUsersThreeDuotone } from "react-icons/pi"
-
+import Paper from '@mui/material/Paper';
+import { styled } from '@mui/material/styles';
 
 
 
 const Servicos = () => {
 
+    const item = styled(Paper)(({ theme }) => ({
+        padding: theme.spacing(1),
+        textAlign: 'center',
+        display:"flex",
+        color: theme.palette.text.secondary,
+      }));
+      
 
   return (
     <> 
@@ -23,27 +29,36 @@ const Servicos = () => {
        Serviços
         <Typography sx={{color:'#986dff',fontSize:'1.2em', alignItems:'center',textAlign:'center'}}> .</Typography>
      </Typography>
-    <Grid container sx={{
-        marginTop:'50px',
-        display:'grid',
-        gridTemplateColumns:'repeat(3,380px)',
-        justifyContent:'center',
-        gap:'30px',
+
+    <Grid sx={{
+       display: 'flex',
+       justifyContent: 'center',
+       alignItems: 'center',
+       padding: '50px',
+       gap: '30px',
+       '@media (max-width: 1200px)': {
+         gap: '20px',
+         flexDirection: 'column',
+       },
+       '@media (max-width: 800px)': {
+         flexDirection: 'column',
+         gap: '20px',
+       }
+
         
 
     }}>
 
 
         <Grid sx={{
-            border: '2px solid #1f1f1f',
-            padding:'30px',
-            transition:'0.7s',
-            alignItems:"center",
-            borderRadius:'10px',
-            textAlign:'center',
-            ':hover':{
-                border: '2px solid #986dff'
-            }
+         border: '2px solid #1f1f1f',
+         padding: '30px',
+         transition: '0.7s',
+         borderRadius: '10px',
+         textAlign: 'center',
+         ':hover': {
+           border: '2px solid #986dff'
+         },
         }}>
             <RiFileCodeLine size={50} color='#986dff' style={{marginBottom:'10px'}}/>
 
@@ -52,6 +67,11 @@ const Servicos = () => {
                 color:"#fff",
                 fontWeight:'bold',
                 marginBottom:'10px'
+                ,
+
+                '@media (max-width:350px)':{
+                   fontSize:'1em'
+                }
             }}>
                 Desenvolvimento
 
@@ -67,16 +87,17 @@ const Servicos = () => {
             </Typography>
         </Grid>
 
-        <Grid sx={{
-            border: '2px solid #1f1f1f',
-            borderRadius:'10px',
-            padding:'30px',
-            transition:'0.7s',
-            alignItems:"center",
-            textAlign:'center',
-            ':hover':{
-                border: '2px solid #986dff'
-            }
+        <Grid   sx={{
+         border: '2px solid #1f1f1f',
+         padding: '30px',
+         transition: '0.7s',
+         borderRadius: '10px',
+         textAlign: 'center',
+
+         ':hover': {
+           border: '2px solid #986dff'
+         },
+         
         }}>
             <PiWebhooksLogoBold size={50} color='#986dff' style={{marginBottom:'10px'}}/>
 
@@ -84,7 +105,11 @@ const Servicos = () => {
                 fontSize:'1.4em',
                 color:"#fff",
                 fontWeight:'bold',
-                marginBottom:'10px'
+                marginBottom:'10px',
+
+                '@media (max-width:350px)':{
+                   fontSize:'1em'
+                }
             }}>
                 Motion
 
@@ -101,16 +126,15 @@ const Servicos = () => {
 
         </Grid>
 
-        <Grid sx={{
-            border: '2px solid #1f1f1f',
-            borderRadius:'10px',
-            padding:'30px',
-            transition:'0.7s',
-            alignItems:"center",
-            textAlign:'center',
-            ':hover':{
-                border: '2px solid #986dff'
-            }
+        <Grid   sx={{
+          border: '2px solid #1f1f1f',
+          padding: '30px',
+          transition: '0.7s',
+          borderRadius: '10px',
+          textAlign: 'center',
+          ':hover': {
+            border: '2px solid #986dff'
+          },
         }}>
             <PiUsersThreeDuotone size={50} color='#986dff' style={{
                 marginBottom:'10px',}}
@@ -120,7 +144,10 @@ const Servicos = () => {
                 fontSize:'1.4em',
                 color:"#fff",
                 fontWeight:'bold',
-                marginBottom:'10px'
+                marginBottom:'10px',
+                '@media (max-width:350px)':{
+                   fontSize:'1em'
+                }
             }}>
                 Users
 
