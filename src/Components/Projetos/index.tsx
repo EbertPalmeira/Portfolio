@@ -65,7 +65,7 @@ const Projetos = () => {
             boxShadow: '0px 0px 13px 5px #1f1f1f'
           }
         }}>
-          <Avatar src={jokenpo} sx={{ width: '300px', height: '300px', borderRadius: 0,textAlign:'center' }} />
+          <Avatar src={jokenpo} sx={{ width: '250px', height: '300px', borderRadius: 0,textAlign:'center' }} />
           <Typography sx={{ color: '#fff', fontSize: '1.2em' }}>Jokenpô</Typography>
           <Typography sx={{ color: '#fff' }}>
             Este projeto foi desenvolvido para jogar pedra, papel e tesoura contra o computador,
@@ -114,7 +114,7 @@ const Projetos = () => {
             boxShadow: '0px 0px 13px 5px #1f1f1f'
           }
         }}>
-          <Avatar src={Quiz} sx={{ width: '300px', height: '300px', borderRadius: 0, }} />
+          <Avatar src={Quiz} sx={{ width: '250px', height: '300px', borderRadius: 0, }} />
           <Typography sx={{ color: '#fff', fontSize: '1.2em' }}>QuizWeb</Typography>
           <Typography sx={{ color: '#fff' }}>
             Aplicativo para testar conhecimentos em diversos assuntos.
