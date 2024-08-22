@@ -69,10 +69,11 @@ const Nav = () => {
                 
                 sx={{ 
                   textDecoration: 'none',
-                   color: 'white',
+                   color: '#9ca3af',
                    fontWeight:'700' ,
                    position: 'relative',
                    paddingBottom:'5px',
+                   transition:'0.5s',
 
                    '::after' :{
                     content: '""',
@@ -93,6 +94,9 @@ const Nav = () => {
                     transform:'scaleX(1)',
                     borderRadius: '5px',
                     marginTop:'10px',
+                  },
+                  ':hover':{
+                    color:"#fff"
                   }
 
                    

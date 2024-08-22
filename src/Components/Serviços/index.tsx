@@ -2,11 +2,17 @@ import {Grid, Typography} from '@mui/material'
 import { RiFileCodeLine } from "react-icons/ri";
 import { PiWebhooksLogoBold,PiUsersThreeDuotone } from "react-icons/pi"
 
-
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Servicos = () => {
-
-
+  useEffect(() => {
+    AOS.init({
+      duration: 7000, 
+      once: true,     
+    });
+  }, []);
 
   return (
     <> 
@@ -19,7 +25,10 @@ const Servicos = () => {
       fontSize:'2em',
       alignItems:'center',
       marginTop:'150px'
-     }}>
+     }}
+     data-aos="fade-down"
+      data-aos-duration="3000"
+     >
        Serviços
         <Typography sx={{color:'#986dff',fontSize:'1.2em', alignItems:'center',textAlign:'center'}}> .</Typography>
      </Typography>
@@ -54,7 +63,10 @@ const Servicos = () => {
          ':hover': {
            border: '2px solid #986dff'
          },
-        }}>
+        }}
+        data-aos="zoom-out-down"
+        data-aos-duration="3000"
+        >
             <RiFileCodeLine size={50} color='#986dff' style={{marginBottom:'10px'}}/>
 
             <Typography sx={{
@@ -93,7 +105,10 @@ const Servicos = () => {
            border: '2px solid #986dff'
          },
          
-        }}>
+        }}
+        data-aos="zoom-out-down"
+        data-aos-duration="2500"
+        >
             <PiWebhooksLogoBold size={50} color='#986dff' style={{marginBottom:'10px'}}/>
 
             <Typography sx={{
@@ -130,7 +145,9 @@ const Servicos = () => {
           ':hover': {
             border: '2px solid #986dff'
           },
-        }}>
+        }}
+        data-aos="zoom-out-down"
+        data-aos-duration="2000">
             <PiUsersThreeDuotone size={50} color='#986dff' style={{
                 marginBottom:'10px',}}
                 />

@@ -3,7 +3,20 @@ import {Grid,Box, Typography} from '@mui/material'
 import { FaHtml5,FaCss3Alt,FaJs,FaReact,FaWordpress } from "react-icons/fa";
 import { SiTypescript,SiStyledcomponents,SiMui } from "react-icons/si";
 
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+
 const Conhecimentos = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 7000, 
+      once: true,     
+    });
+  }, []);
 
   const customTypographyStyles = () => ({
     padding:'20px',
@@ -99,6 +112,9 @@ const Conhecimentos = () => {
             handleMouseEnter(iconDescriptions.html)}
             onMouseLeave={handleMouseLeave} 
             sx={customTypographyStyles}
+            data-aos="fade-down"
+            data-aos-duration="3000"
+            
             >
           <FaHtml5 size={60}/>
         </Typography>
@@ -106,48 +122,80 @@ const Conhecimentos = () => {
         <Typography onMouseEnter={() => 
             handleMouseEnter(iconDescriptions.css)}
             onMouseLeave={handleMouseLeave} 
-            sx={customTypographyStyles}>
+            sx={customTypographyStyles}
+            data-aos="fade-down"
+            data-aos-duration="3000"
+            data-aos-easing="linear"
+            >
+              
           <FaCss3Alt size={60}/>
         </Typography>
 
         <Typography onMouseEnter={() => 
             handleMouseEnter(iconDescriptions.js)}
             onMouseLeave={handleMouseLeave} 
-            sx={customTypographyStyles}>
+            sx={customTypographyStyles}
+            data-aos="fade-down"
+            data-aos-duration="3000"
+            
+            >
           <FaJs size={60}/>
         </Typography>
 
         <Typography onMouseEnter={() => 
             handleMouseEnter(iconDescriptions.react)}
             onMouseLeave={handleMouseLeave} 
-            sx={customTypographyStyles}>
+            sx={customTypographyStyles}
+            data-aos="fade-down"
+            data-aos-duration="3000"
+            data-aos-easing="linear"
+            >
           <FaReact size={60}/>
         </Typography>
 
         <Typography onMouseEnter={() => 
             handleMouseEnter(iconDescriptions.typescript)}
             onMouseLeave={handleMouseLeave} 
-            sx={customTypographyStyles}>
+            sx={customTypographyStyles}
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-duration="3000"
+            >
           <SiTypescript size={60} />
         </Typography>
 
         <Typography onMouseEnter={() => 
             handleMouseEnter(iconDescriptions.styledcomponents)}
             onMouseLeave={handleMouseLeave} 
-           sx={customTypographyStyles}>
+           sx={customTypographyStyles}
+           data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-duration="3000"
+            data-aos-easing="linear"
+           >
           <SiStyledcomponents size={60} />
         </Typography>
 
         <Typography onMouseEnter={() => 
             handleMouseEnter(iconDescriptions.mui)}
             onMouseLeave={handleMouseLeave} 
-            sx={customTypographyStyles}>
+            sx={customTypographyStyles}
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-duration="3000"
+            
+            >
           <SiMui size={60} />
         </Typography>
         <Typography onMouseEnter={() => 
             handleMouseEnter(iconDescriptions.wordpress)}
             onMouseLeave={handleMouseLeave} 
-            sx={customTypographyStyles}>
+            sx={customTypographyStyles}
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-duration="3000"
+            data-aos-easing="linear"
+            >
           <FaWordpress size={60} />
         </Typography>
       </Box>

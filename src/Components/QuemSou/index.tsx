@@ -2,11 +2,11 @@ import { Grid,Avatar,Typography,Link } from '@mui/material'
 import imgEu from '../../imgs/eucode.svg'
 import {FaInstagram,FaLinkedin,FaGithub,FaStackOverflow,FaWhatsapp} from "react-icons/fa";
 
-
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { keyframes } from '@emotion/react';
-
-
 
 
 const bounceAnimation = keyframes`
@@ -56,6 +56,13 @@ const bounceAnimation = keyframes`
 
 
 const Main = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 7000, 
+      once: true,     
+    });
+  }, []);
   return (
     <Grid container spacing={2}  sx={{
         display: 'grid',
@@ -112,7 +119,10 @@ const Main = () => {
                 '@media (max-width: 400px)': {
                     width:'250px',height:'250px',
             },
-            }}/>
+            }}
+             data-aos="fade-down"
+              data-aos-duration="3000"
+            />
 
         <Grid sx={{
             display:'grid',
@@ -130,28 +140,47 @@ const Main = () => {
         </Grid>
 
 
-        <Grid sx={{display:'grid'}}>
+        <Grid sx={{display:'grid'}}
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        >
             <Typography sx={{
                 color:"#986dff",
                 display:'flex',
                 gap:'10px',
                 fontSize:'1.6em'
-                }}>
+                }}
+                
+                >
                 Quem sou.
             </Typography>
 
-            <Typography sx={{fontSize:'2em',color:"#fff"}}>
+            <Typography sx={{
+              fontSize:'2em',
+              color:"#fff",
+              
+              }}
+              >
                 Ebert Palmeira
             </Typography>
 
-            <Typography sx={{fontSize:'1.2em',color:"#fff",marginBottom:'20px'}}>
+            <Typography sx={{
+              fontSize:'1.2em',
+              color:"#fff",
+              marginBottom:'20px',
+              
+              }}
+              >
                 Frontend Developer
             </Typography>
 
             <Typography  sx={{
                 color:'#9ca3af',
                  fontFamily: 'Archivo, Arial, sans-serif',
-            }}>
+            }}
+                
+            >
                 Meu nome é Ebert, sou desenvolvedor Front-end. Sempre fui um entusiasta das tecnologias e estou constantemente em busca de conhecimento, seja através do YouTube ou de cursos online. Desenvolvo interfaces modernas e de alta qualidade, concentrando-me em performance, animações e responsividade. Além disso, crio projetos independentes para praticar e aprimorar meus conhecimentos.
             </Typography>
 
@@ -161,24 +190,37 @@ const Main = () => {
                 marginTop:'30px',
                 flexWrap: 'wrap'
                 
-                }}>
-                <Typography sx={customTypographyStyles()}>
+                }}
+                
+                >
+                <Typography sx={customTypographyStyles()} 
+                  data-aos="fade-down"
+                  data-aos-duration="3000">
                     <Link href="https://www.instagram.com/ebert_palmeira/" sx={{cursor:'pointer'}}  > <FaInstagram color='#986dff' size={30}/> </Link>   
                 </Typography>
 
-                <Typography sx={customTypographyStyles()}>
+                <Typography sx={customTypographyStyles()}
+                data-aos="fade-down"
+                  data-aos-duration="2500"
+                >
                    <Link href="https://www.linkedin.com/in/ebert-palmeira-613a77228/" sx={{cursor:'pointer'}}> <FaLinkedin color='#986dff' size={30}/> </Link>
                 </Typography>
 
-                <Typography sx={customTypographyStyles()}>
+                <Typography sx={customTypographyStyles()}
+                data-aos="fade-down"
+                data-aos-duration="2000">
                     <Link href="https://github.com/EbertPalmeira" sx={{cursor:'pointer'}}> <FaGithub color='#986dff' size={30}/> </Link>
                 </Typography>
 
-                <Typography  sx={customTypographyStyles()}>
+                <Typography  sx={customTypographyStyles()}
+                data-aos="fade-down"
+                data-aos-duration="1500">
                     <Link href="https://stackoverflow.com/users/20626625/ebert-palmeira" sx={{cursor:'pointer'}}> <FaStackOverflow color='#986dff' size={30}/> </Link>
                 </Typography>
 
-                <Typography sx={customTypographyStyles()}>
+                <Typography sx={customTypographyStyles()}
+                data-aos="fade-down"
+                data-aos-duration="1000">
                     <Link href="https://api.whatsapp.com/send?phone=5564981479751&text=" sx={{cursor:'pointer'}}> <FaWhatsapp color='#986dff' size={30} /> </Link>
                 </Typography>
             </Grid>

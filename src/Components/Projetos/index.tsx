@@ -3,7 +3,20 @@ import { FaGithub, FaGamepad } from 'react-icons/fa';
 import jokenpo from '../../imgs/jokenpo.png'; 
 import Quiz from '../../imgs/quiz.png'; 
 
-const Projetos = () => (
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+const Projetos = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 7000, 
+      once: true,     
+    });
+  }, []);
+
+  return(
   <Grid sx={{ marginTop: '150px'}}>
     <Typography sx={{
       display: 'flex',
@@ -13,7 +26,10 @@ const Projetos = () => (
       alignItems: 'center',
       marginBottom: '50px',
       
-    }}>
+    }}
+      data-aos="fade-down"
+      data-aos-duration="3000"
+    >
       Projetos
       <Typography sx={{ color: '#986dff', fontSize: '1.2em', textAlign: 'center' }}>.</Typography>
     </Typography>
@@ -29,10 +45,12 @@ const Projetos = () => (
           flexDirection:'column'
 
                         }
-    }}>
+    }}
+    
+    >
       {/* Jokenpo */}
-      <Grid  sx={{
-      }}>
+      <Grid   data-aos="zoom-in"
+      data-aos-duration="3000">
         <Box sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -80,7 +98,8 @@ const Projetos = () => (
       </Grid>
 
       {/* QuizWeb */}
-      <Grid >
+      <Grid data-aos="zoom-in"
+      data-aos-duration="3000">
         <Box sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -130,6 +149,6 @@ const Projetos = () => (
    
     </Box>
   </Grid>
-);
+)};
 
 export default Projetos;
