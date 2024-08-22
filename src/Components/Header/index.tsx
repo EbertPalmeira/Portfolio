@@ -2,7 +2,6 @@ import  { Button, Grid,Typography,Avatar}  from '@mui/material'
 import code from '../../imgs/code.svg'
 import { FaLinkedin,FaGithub  } from "react-icons/fa";
 
-import './styles.css'
 
 const Header = () => {
 
