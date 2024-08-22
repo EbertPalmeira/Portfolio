@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {Grid,Box, Typography} from '@mui/material'
 import { FaHtml5,FaCss3Alt,FaJs,FaReact,FaWordpress } from "react-icons/fa";
 import { SiTypescript,SiStyledcomponents,SiMui } from "react-icons/si";

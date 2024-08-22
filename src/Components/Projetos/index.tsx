@@ -1,8 +1,7 @@
-import React from 'react';
 import { Grid, Typography, Box, Avatar, Button } from '@mui/material';
 import { FaGithub, FaGamepad } from 'react-icons/fa';
-import jokenpo from '../../imgs/jokenpo.png'; // Substitua pelo caminho correto
-import Quiz from '../../imgs/quiz.png'; // Substitua pelo caminho correto
+import jokenpo from '../../imgs/jokenpo.png'; 
+import Quiz from '../../imgs/quiz.png'; 
 
 const Projetos = () => (
   <Grid sx={{ marginTop: '150px'}}>

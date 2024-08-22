@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Drawer, IconButton, List, ListItem,  Box, Grid,  useMediaQuery, useTheme, Avatar } from '@mui/material';
+import { Drawer, IconButton, List, ListItem,  Box, Grid,  useMediaQuery, useTheme} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { FaCode,FaInstagram } from 'react-icons/fa';
+import { FaCode} from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';
 
 import styled, { keyframes } from 'styled-components';
@@ -11,8 +11,14 @@ const Nav = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const toggleDrawer = (open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+  const toggleDrawer =
+  (open: boolean) =>
+  (event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent>) => {
+    if (
+      event.type === 'keydown' &&
+      ((event as React.KeyboardEvent<Element>).key === 'Tab' ||
+        (event as React.KeyboardEvent<Element>).key === 'Shift')
+    ) {
       return;
     }
     setOpen(open);
