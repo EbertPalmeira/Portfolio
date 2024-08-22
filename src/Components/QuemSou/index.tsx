@@ -1,4 +1,4 @@
-import { Grid,Avatar,Typography,Link } from '@mui/material'
+import { Grid,Avatar,Typography,Link,Box } from '@mui/material'
 import imgEu from '../../imgs/eucode.svg'
 import {FaInstagram,FaLinkedin,FaGithub,FaStackOverflow,FaWhatsapp} from "react-icons/fa";
 
@@ -26,31 +26,31 @@ const bounceAnimation = keyframes`
 
 
 
-  const customTypographyStyles = () => ({
-                    padding:'10px 15px',
-                    border:'5px solid #1f1f1f',
-                    borderRadius:'20px',
-                    transition: 'all 0.8s',
-                    
 
-                    '&:hover': {
-                    borderRadius: '5px',
-                    transform: 'translateY(-10px)',
-                    boxShadow: `
-                        0 7px 0 -2px #986dff,
-                        0 15px 0 -4px #39a2db,
-                        0 16px 10px -3px #39a2db
-                    `,
-                    },
-                    '&:active': {
-                    transition: 'all 0.2s',
-                    transform: 'translateY(-5px)',
-                    boxShadow: `
-                        0 2px 0 -2px #f85959,
-                        0 8px 0 -4px #39a2db,
-                        0 12px 10px -3px #39a2db
-                    `,
-                    },
+  const customTypographyStyles = () => ({
+    padding: '10px 15px',
+    border: '5px solid #1f1f1f',
+    borderRadius: '20px',
+    transition: 'transform 0.5s ease, box-shadow 0.5s ease',
+    willChange: 'transform, box-shadow', // Adiciona otimização
+    '&:hover': {
+      borderRadius: '20px',
+      transform: 'translateY(-10px)',
+      boxShadow: `
+        0 7px 0 -2px #986dff,
+        0 15px 0 -4px #39a2db,
+        0 16px 10px -3px #39a2db
+      `,
+    },
+    '&:active': {
+      transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+      transform: 'translateY(-5px)',
+      boxShadow: `
+        0 2px 0 -2px #f85959,
+        0 8px 0 -4px #39a2db,
+        0 12px 10px -3px #39a2db
+      `,
+    },
   });
   
 
@@ -193,36 +193,45 @@ const Main = () => {
                 }}
                 
                 >
-                <Typography sx={customTypographyStyles()} 
-                  data-aos="fade-down"
-                  data-aos-duration="3000">
-                    <Link href="https://www.instagram.com/ebert_palmeira/" sx={{cursor:'pointer'}}  > <FaInstagram color='#986dff' size={30}/> </Link>   
-                </Typography>
+                <Box data-aos="fade-down"
+                  data-aos-duration="3000"
+                  data-aos-once="true">
 
-                <Typography sx={customTypographyStyles()}
-                data-aos="fade-down"
-                  data-aos-duration="2500"
-                >
-                   <Link href="https://www.linkedin.com/in/ebert-palmeira-613a77228/" sx={{cursor:'pointer'}}> <FaLinkedin color='#986dff' size={30}/> </Link>
-                </Typography>
+                  <Typography 
+                  sx={customTypographyStyles()} >
+                      <Link href="https://www.instagram.com/ebert_palmeira/" sx={{cursor:'pointer'}}  > <FaInstagram color='#986dff' size={30}/> </Link>   
+                  </Typography>
+                </Box>
+                
+                <Box data-aos="fade-down"
+                  data-aos-duration="2500">
 
-                <Typography sx={customTypographyStyles()}
-                data-aos="fade-down"
+                  <Typography sx={customTypographyStyles()}>
+                    <Link href="https://www.linkedin.com/in/ebert-palmeira-613a77228/" sx={{cursor:'pointer'}}> <FaLinkedin color='#986dff' size={30}/> </Link>
+                  </Typography>
+                </Box>
+
+                <Box data-aos="fade-down"
                 data-aos-duration="2000">
-                    <Link href="https://github.com/EbertPalmeira" sx={{cursor:'pointer'}}> <FaGithub color='#986dff' size={30}/> </Link>
-                </Typography>
 
-                <Typography  sx={customTypographyStyles()}
-                data-aos="fade-down"
+                  <Typography sx={customTypographyStyles()}>
+                      <Link href="https://github.com/EbertPalmeira" sx={{cursor:'pointer'}}> <FaGithub color='#986dff' size={30}/> </Link>
+                  </Typography>
+                </Box>
+
+                <Box data-aos="fade-down"
                 data-aos-duration="1500">
-                    <Link href="https://stackoverflow.com/users/20626625/ebert-palmeira" sx={{cursor:'pointer'}}> <FaStackOverflow color='#986dff' size={30}/> </Link>
-                </Typography>
+                  <Typography sx={customTypographyStyles()}>
+                      <Link href="https://stackoverflow.com/users/20626625/ebert-palmeira" sx={{cursor:'pointer'}}> <FaStackOverflow color='#986dff' size={30}/> </Link>
+                  </Typography>
+                </Box>
 
-                <Typography sx={customTypographyStyles()}
-                data-aos="fade-down"
+                <Box data-aos="fade-down"
                 data-aos-duration="1000">
+                  <Typography sx={customTypographyStyles()}>
                     <Link href="https://api.whatsapp.com/send?phone=5564981479751&text=" sx={{cursor:'pointer'}}> <FaWhatsapp color='#986dff' size={30} /> </Link>
                 </Typography>
+                </Box>
             </Grid>
 
         </Grid>
