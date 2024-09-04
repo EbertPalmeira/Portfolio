@@ -249,7 +249,7 @@ const Projetos = () => {
               intuitiva , enquanto o back-end em Node.js gerencia a lógica de negócios e interage com o banco
                de dados Supabase .
             </Typography>
-            <Button href='https://github.com/EbertPalmeira/dashboardFinanceiro' sx={{
+            <Button href='https://github.com/EbertPalmeira/Projeto-cadastro-de-pacientes' sx={{
               display: 'flex',
               gap: '20px',
               background: '#8a2be2',
