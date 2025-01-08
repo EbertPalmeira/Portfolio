@@ -121,19 +121,15 @@ const Header = () => {
                             padding:'10px',
                             transform: 'scale(1.05)',
                         },
-
                         '@media (max-width:400px)':{
                         width: '200px',
-                        height:' 70px',
-
-                        
-                        
+                        height:' 70px',   
                     }
                     
                 }} className='link'>
                     <FaLinkedin size={30} style={{background:'none',color:'#fff'}}/>
                    
-                    <a href='' style={{background:'none',color:'#fff'}}> LinkedIn</a>
+                    <a href='https://www.linkedin.com/in/ebert-palmeira-613a77228/' style={{background:'none',color:'#fff'}}> LinkedIn</a>
                 </Button>
 
                     <Button sx={{
@@ -159,7 +155,7 @@ const Header = () => {
                     }} className='git'>
                     <FaGithub size={30} style={{background:'none',color:'#fff'}}/>
                    
-                    <a href='' style={{background:'none',color:'#fff'}}>GitHub</a>
+                    <a href='https://github.com/EbertPalmeira' style={{background:'none',color:'#fff'}}>GitHub</a>
                     </Button>
             </Grid>
 
