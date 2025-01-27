@@ -1,6 +1,5 @@
-import { Grid, Typography, Box, Avatar, Button } from '@mui/material';
-import { FaGithub, FaGamepad } from 'react-icons/fa';
-import jokenpo from '../../imgs/jokenpo.png'; 
+import { Grid, Typography, Box, Avatar } from '@mui/material';
+import { FaExternalLinkAlt } from "react-icons/fa"
 import Quiz from '../../imgs/quiz.png'; 
 import Dash from '../../imgs/dash.png'
 import Ubs from '../../imgs/ubs.png'
@@ -8,6 +7,8 @@ import Ubs from '../../imgs/ubs.png'
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import '../../App.css'
 
 const Projetos = () => {
 
@@ -41,116 +42,99 @@ const Projetos = () => {
       display:'grid',
       gridTemplateColumns:"500px 500px",
       justifyContent:'center',
-      gap:'100px',
+      gap:'50px',
       padding:'50px',
-      
 
       '@media (max-width:1200px)':{
           flexDirection:'column',
           gridTemplateColumns:"1fr",
 
-                        }
+        },
+        '@media (max-width:500px)':{
+          gridTemplateColumns:"350px",
+
+        }
     }}
     
     >
-      {/* Jokenpo */}
-      <Grid   data-aos="zoom-in"
-      data-aos-duration="3000">
-        <Box sx={{
-          flex: '1 1 45%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '20px',
-          textAlign: 'center',
-          border: '4px solid #1f1f1f',
-          padding: '20px',
-          minHeight: '650px', 
-          transition: '0.5s',
-          '&:hover': {
-            boxShadow: '0px 0px 13px 5px #1f1f1f'
-          }
-        }}>
-          <Avatar src={jokenpo} sx={{ width: '250px', height: '300px', borderRadius: 0,textAlign:'center' }} />
-          <Typography sx={{ color: '#fff', fontSize: '1.2em' }}>Jokenpô</Typography>
-          <Typography sx={{ color: '#fff' }}>
-            Este projeto foi desenvolvido para jogar pedra, papel e tesoura contra o computador,
-            utilizando os hooks do React como a base principal. Manipulei os estados do jogo com useState e gerenciei o
-            ciclo de vida dos componentes com useEffect.
-          </Typography>
-          <Button href='https://github.com/EbertPalmeira/Jokenpo' sx={{
-            display: 'flex',
-            gap: '20px',
-            background: '#8a2be2',
-            color: '#fff',
-            transition: '0.5s',
-            padding:'10px 50px'
-          }}>
-            <FaGithub size={30} style={{ color: '#fff' }} />
-            GitHub
-          </Button>
-          <Button href='https://github.com/EbertPalmeira/Jokenpo' sx={{
-            display: 'flex',
-            gap: '20px',
-            background: '#7B68EE',
-            color: '#fff',
-            transition: '0.5s',
-            padding:'10px 50px'
-          }}>
-            <FaGamepad size={30} style={{ color: '#fff' }} />
-            Aplicação
-          </Button>
-        </Box>
-      </Grid>
+     
 
       {/* QuizWeb */}
-      <Grid data-aos="zoom-in"
-      data-aos-duration="3000">
-        <Box sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '20px',
-          textAlign: 'center',
-          border: '4px solid #1f1f1f',
-          padding: '20px',
-          minHeight: '650px', 
-          transition: '0.5s',
-          '&:hover': {
-            boxShadow: '0px 0px 13px 5px #1f1f1f'
-          }
-        }}>
-          <Avatar src={Quiz} sx={{ width: '200px', height: '280px', borderRadius: 0, }} />
-          <Typography sx={{ color: '#fff', fontSize: '1.2em' }}>QuizWeb</Typography>
-          <Typography sx={{ color: '#fff' }}>
-            Aplicativo para testar conhecimentos em diversos assuntos.
-            Neste projeto, tive a oportunidade de explorar o hook useContext pela primeira vez, o que me permitiu gerenciar o estado global de forma eficiente.
-            Utilizei também o React-Router-Dom para implementar as rotas.
-          </Typography>
-          <Button href='https://github.com/EbertPalmeira/QuizWeb' sx={{
-            display: 'flex',
-            gap: '20px',
-            background: '#8a2be2',
-            color: '#fff',
-            transition: '0.5s',
-            padding:'10px 50px'
-          }}>
-            <FaGithub size={30} style={{ color: '#fff' }} />
-            GitHub
-          </Button>
-          <Button href='https://quizebertdeveloper.netlify.app/' sx={{
-            display: 'flex',
-            gap: '20px',
-            background: '#7B68EE',
-            color: '#fff',
-            transition: '0.5s',
-            padding:'10px 50px'
-          }}>
-            <FaGamepad size={30} style={{ color: '#fff' }} />
-            Aplicação
-          </Button>
+    <Grid data-aos="zoom-in" data-aos-duration="3000">
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "20px",
+          textAlign: "center",
+          border: "4px solid #1f1f1f",
+          padding: "20px",
+          transition: "0.5s",
+          "&:hover": {
+            boxShadow: "0px 0px 13px 5px #1f1f1f",
+          },
+        }}
+      >
+        {/* Wrapper para Avatar com emoji */}
+        <Box
+          sx={{
+            position: "relative",
+            "&:hover .emoji": {
+              opacity: 1, // Mostra o emoji ao passar o mouse
+            },
+          }}
+        >
+          {/* Avatar */}
+          <Avatar
+            src={Quiz}
+            sx={{
+              width: "200px",
+              height: "250px",
+              borderRadius: 0,
+
+             '@media (max-width:500px)':{
+                width:'100%',
+                maxWidth: '100%',
+                height: 'auto',}
+              
+
+            }}
+          />
+
+          {/* Emoji no centro */}
+          <Box
+            component="a"
+            href="https://quizebertdeveloper.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="emoji"
+            sx={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)", // Centraliza no meio
+              fontSize: "50px",
+              color: "#fff",
+              textDecoration: "none",
+              opacity: 0, // Esconde o emoji por padrão
+              transition: "opacity 0.3s ease, transform 0.3s ease",
+              "&:hover": {
+                transform: "translate(-50%, -50%) scale(1.5)", // Zoom ao passar o mouse no emoji
+              },
+          
+
+            }}
+          >
+            <FaExternalLinkAlt color='#4682B4	' className='icon'/>
+          </Box>
         </Box>
-      </Grid>
+
+        <Typography sx={{ color: "#fff", fontSize: "1.2em" }}>QuizWeb</Typography>
+      </Box>
+</Grid>
+
+
 
       {/* Dashboard */}
         <Grid data-aos="zoom-in"
@@ -163,55 +147,68 @@ const Projetos = () => {
             textAlign: 'center',
             border: '4px solid #1f1f1f',
             padding: '20px',
-            minHeight: '650px', 
+         
             transition: '0.5s',
             '&:hover': {
               boxShadow: '0px 0px 13px 5px #1f1f1f'
             }
           }}>
-            <Avatar src={Dash}  sx={{
+            <Box
+          sx={{
+            position: "relative",
+            "&:hover .emoji": {
+              opacity: 1, // Mostra o emoji ao passar o mouse
+            },
+          }}
+        >
+          {/* Avatar */}
+          <Avatar
+            src={Dash}
+            sx={{
               width: '420px',
               height: '250px',
-                borderRadius: 0,
-                objectFit: 'contain' ,
-                
-                '@media (max-width:1200px)':{
-                  width: '350px',
-                  height: '220px',
-                }
-                
-                }} />
+              borderRadius: 0,
+
+              '@media (max-width:500px)':{
+                width:'100%',
+                maxWidth: '100%',
+                height: 'auto',}
+              
+            }}
+          />
+
+          {/* Emoji no centro */}
+          <Box
+            component="a"
+            href="https://www.linkedin.com/posts/ebert-palmeira-dev_react-typescript-webdevelopment-activity-7236910703205355521-Fr9F?utm_source=share&utm_medium=member_desktop"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="emoji"
+            sx={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)", // Centraliza no meio
+              fontSize: "50px",
+              color: "#fff",
+              textDecoration: "none",
+              opacity: 0, // Esconde o emoji por padrão
+              transition: "opacity 0.3s ease, transform 0.3s ease",
+              "&:hover": {
+                transform: "translate(-50%, -50%) scale(1.5)", // Zoom ao passar o mouse no emoji
+              },
+            }}
+          >
+            <FaExternalLinkAlt color='#4682B4	' className='icon'/>
+          </Box>
+        </Box>
+            
             <Typography sx={{ color: '#fff', fontSize: '1.2em' }}>Dashboard Financeiro</Typography>
-            <Typography sx={{ color: '#fff' }}>
-            Desenvolvi um dashboard financeiro interativo utilizando React, que permite o controle e visualização de entradas e saídas financeiras. O projeto inclui gráficos dinâmicos que se atualizam em tempo real,
-            destacando as transações de forma visual com cores diferenciadas para entradas e saídas.
-            </Typography>
-            <Button href='https://github.com/EbertPalmeira/dashboardFinanceiro' sx={{
-              display: 'flex',
-              gap: '20px',
-              background: '#8a2be2',
-              color: '#fff',
-              transition: '0.5s',
-              padding:'10px 50px'
-            }}>
-              <FaGithub size={30} style={{ color: '#fff' }} />
-              GitHub
-            </Button>
-            <Button href='https://www.linkedin.com/feed/update/urn:li:activity:7236910703205355521/' sx={{
-              display: 'flex',
-              gap: '20px',
-              background: '#7B68EE',
-              color: '#fff',
-              transition: '0.5s',
-              padding:'10px 50px'
-            }}>
-              <FaGamepad size={30} style={{ color: '#fff' }} />
-              Aplicação
-            </Button>
+            
           </Box>
         </Grid>
 
-      {/* Ubs */}
+        {/* Ubs */}
         <Grid data-aos="zoom-in"
           data-aos-duration="3000">
           <Box sx={{
@@ -222,56 +219,62 @@ const Projetos = () => {
             textAlign: 'center',
             border: '4px solid #1f1f1f',
             padding: '20px',
-            minHeight: '650px', 
+    
             transition: '0.5s',
             '&:hover': {
               boxShadow: '0px 0px 13px 5px #1f1f1f'
             }
           }}>
-            <Avatar src={Ubs}  sx={{
+            {/* Wrapper para Avatar com emoji */}
+        <Box
+          sx={{
+            position: "relative",
+            "&:hover .emoji": {
+              opacity: 1, // Mostra o emoji ao passar o mouse
+            },
+          }}
+        >
+          {/* Avatar */}
+          <Avatar
+            src={Ubs}
+            sx={{
               width: '420px',
               height: '250px',
-                borderRadius: 0,
-                objectFit: 'contain',
+              borderRadius: 0,
 
-                '@media (max-width:1200px)':{
-                  width: '350px',
-                  height: '250px',
-                }
-                
-                
-                }} />
-            <Typography sx={{ color: '#fff', fontSize: '1.2em' }}>Cadastro de Pacientes</Typography>
-            <Typography sx={{ color: '#fff' }}>
-            Sistema completo de cadastro de pacientes usando React, Node.js e Supabase. 
-            O projeto permite o registro e a gestão de informações detalhadas dos pacientes.O front-end, 
-            construído com React, fornece uma interface
-              intuitiva , enquanto o back-end em Node.js gerencia a lógica de negócios e interage com o banco
-               de dados Supabase .
-            </Typography>
-            <Button href='https://github.com/EbertPalmeira/Projeto-cadastro-de-pacientes' sx={{
-              display: 'flex',
-              gap: '20px',
-              background: '#8a2be2',
-              color: '#fff',
-              transition: '0.5s',
-              padding:'10px 50px'
-            }}>
-              <FaGithub size={30} style={{ color: '#fff' }} />
-              GitHub
-            </Button>
-            <Button href='https://www.linkedin.com/feed/update/urn:li:activity:7233233472801112064/' sx={{
-              display: 'flex',
-              gap: '20px',
-              background: '#7B68EE',
-              color: '#fff',
-              transition: '0.5s',
-              padding:'10px 50px'
-            }}>
-              <FaGamepad size={30} style={{ color: '#fff' }} />
-              Aplicação
-            </Button>
-           
+              '@media (max-width:500px)':{
+                width:'100%',
+                maxWidth: '100%',
+                height: 'auto',}
+            }}
+          />
+
+          {/* Emoji no centro */}
+          <Box
+            component="a"
+            href="https://www.linkedin.com/posts/ebert-palmeira-dev_react-typescript-materialui-activity-7233233472801112064-n4kE?utm_source=share&utm_medium=member_desktop"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="emoji"
+            sx={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)", // Centraliza no meio
+              fontSize: "50px",
+              color: "#fff",
+              textDecoration: "none",
+              opacity: 0, // Esconde o emoji por padrão
+              transition: "opacity 0.3s ease, transform 0.3s ease",
+              "&:hover": {
+                transform: "translate(-50%, -50%) scale(1.5)", // Zoom ao passar o mouse no emoji
+              },
+            }}
+          >
+            <FaExternalLinkAlt color='#4682B4	' className='icon'/>
+          </Box>
+        </Box>
+            <Typography sx={{ color: '#fff', fontSize: '1.2em' }}>Cadastro de Pacientes</Typography>  
           </Box>
         </Grid>
 

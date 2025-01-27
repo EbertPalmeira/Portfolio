@@ -1,7 +1,12 @@
 import { useState } from 'react'
 import {Grid,Box, Typography} from '@mui/material'
-import { FaHtml5,FaCss3Alt,FaJs,FaReact,FaWordpress } from "react-icons/fa";
+import { FaHtml5,FaCss3Alt,FaReact,FaWordpress,FaNodeJs } from "react-icons/fa";
 import { SiTypescript,SiStyledcomponents,SiMui } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+
+import { IoLogoJavascript } from "react-icons/io";
+import { DiMysql } from "react-icons/di";
+
 
 import { useEffect } from 'react';
 import AOS from 'aos';
@@ -37,7 +42,10 @@ const Conhecimentos = () => {
       typescript: 'TypeScript é um superconjunto do JavaScript que adiciona tipagem estática.',
       styledcomponents: 'Styled Components é uma biblioteca para estilizar componentes em React usando CSS-in-JS.',
       mui: 'Material-UI é uma biblioteca de componentes React que implementa o Material Design.',
-      wordpress: 'WordPress é um sistema de gerenciamento de conteúdo (CMS) popular que permite criar e gerenciar sites e blogs com facilidade.'
+      wordpress: 'WordPress é um sistema de gerenciamento de conteúdo (CMS) popular que permite criar e gerenciar sites e blogs com facilidade.',
+      Node: "O Node.js é um ambiente de execução de JavaScript no lado do servidor, permitindo que desenvolvedores criem aplicações rápidas e escaláveis usando JavaScript fora do navegador.",
+      mysql:"O MySQL é um sistema de gerenciamento de banco de dados relacional (RDBMS) de código aberto, que utiliza a linguagem SQL para armazenar, gerenciar e manipular dados de forma estruturada em tabelas.",
+      next:'O Next.js é um framework de React para desenvolvimento de aplicações web, que oferece recursos como renderização do lado do servidor (SSR), geração de páginas estáticas (SSG), roteamento automático e otimização de desempenho, facilitando a criação de sites rápidos e escaláveis.'
     };
 
     const [text,setText]= useState<string>('*passe o cursor do mouse no card para ler*')
@@ -139,7 +147,7 @@ const Conhecimentos = () => {
             data-aos-duration="3000"
             
             >
-          <FaJs size={60}/>
+          <IoLogoJavascript size={60}/>
         </Typography>
 
         <Typography onMouseEnter={() => 
@@ -197,6 +205,41 @@ const Conhecimentos = () => {
             data-aos-easing="linear"
             >
           <FaWordpress size={60} />
+        </Typography>
+
+        
+        <Typography onMouseEnter={() => 
+            handleMouseEnter(iconDescriptions.Node)}
+            onMouseLeave={handleMouseLeave} 
+            sx={customTypographyStyles}
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-duration="3000"
+            data-aos-easing="linear"
+            >
+          <FaNodeJs size={60} />
+        </Typography>
+        <Typography onMouseEnter={() => 
+            handleMouseEnter(iconDescriptions.mysql)}
+            onMouseLeave={handleMouseLeave} 
+            sx={customTypographyStyles}
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-duration="3000"
+            data-aos-easing="linear"
+            >
+          <DiMysql size={60} />
+        </Typography>
+        <Typography onMouseEnter={() => 
+            handleMouseEnter(iconDescriptions.next)}
+            onMouseLeave={handleMouseLeave} 
+            sx={customTypographyStyles}
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-duration="3000"
+            data-aos-easing="linear"
+            >
+          <SiNextdotjs size={60} />
         </Typography>
       </Box>
 

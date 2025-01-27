@@ -19,3 +19,13 @@ body{
 
 }
 
+/* No seu arquivo CSS */
+.icon {
+  font-size: 40px;  /* Tamanho padrão */
+}
+
+@media (max-width: 500px) {
+  .icon {
+    font-size: 30px;  /* Tamanho menor em telas pequenas */
+  }
+}
