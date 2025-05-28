@@ -185,14 +185,14 @@ const Projetos = () => {
                   position: "absolute",
                   top: "50%",
                   left: "50%",
-                  transform: "translate(-50%, -50%)", // Centraliza no meio
+                  transform: "translate(-50%, -50%)",
                   fontSize: "50px",
                   color: "#fff",
                   textDecoration: "none",
                   opacity: 0, // Esconde o emoji por padrão
                   transition: "opacity 0.3s ease, transform 0.3s ease",
                   "&:hover": {
-                    transform: "translate(-50%, -50%) scale(1.5)", // Zoom ao passar o mouse no emoji
+                    transform: "translate(-50%, -50%) scale(1.5)",
                   },
                 }}
               >
@@ -229,7 +229,7 @@ const Projetos = () => {
               sx={{
                 position: "relative",
                 "&:hover .emoji": {
-                  opacity: 1, // Mostra o emoji ao passar o mouse
+                  opacity: 1,
                 },
               }}
             >
@@ -260,14 +260,14 @@ const Projetos = () => {
                   position: "absolute",
                   top: "50%",
                   left: "50%",
-                  transform: "translate(-50%, -50%)", // Centraliza no meio
+                  transform: "translate(-50%, -50%)",
                   fontSize: "50px",
                   color: "#fff",
                   textDecoration: "none",
                   opacity: 0, // Esconde o emoji por padrão
                   transition: "opacity 0.3s ease, transform 0.3s ease",
                   "&:hover": {
-                    transform: "translate(-50%, -50%) scale(1.5)", // Zoom ao passar o mouse no emoji
+                    transform: "translate(-50%, -50%) scale(1.5)",
                   },
                 }}
               >
@@ -302,7 +302,7 @@ const Projetos = () => {
               sx={{
                 position: "relative",
                 "&:hover .emoji": {
-                  opacity: 1, // Mostra o emoji ao passar o mouse
+                  opacity: 1,
                 },
               }}
             >
@@ -333,14 +333,14 @@ const Projetos = () => {
                   position: "absolute",
                   top: "50%",
                   left: "50%",
-                  transform: "translate(-50%, -50%)", // Centraliza no meio
+                  transform: "translate(-50%, -50%)",
                   fontSize: "50px",
                   color: "#fff",
                   textDecoration: "none",
-                  opacity: 0, // Esconde o emoji por padrão
+                  opacity: 0,
                   transition: "opacity 0.3s ease, transform 0.3s ease",
                   "&:hover": {
-                    transform: "translate(-50%, -50%) scale(1.5)", // Zoom ao passar o mouse no emoji
+                    transform: "translate(-50%, -50%) scale(1.5)",
                   },
                 }}
               >
